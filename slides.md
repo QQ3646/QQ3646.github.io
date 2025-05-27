@@ -256,7 +256,6 @@ val bottom = 5
 val l = { x => x % 10 >= bottom } /* stack-allocated */
 // Print filtered values
 pfv(collection, l)
-
 if (cond) {
   val heap_l = Evacuation(l)
   array.append(heap_l) /* correct */
@@ -276,7 +275,6 @@ val bottom = 5
 val l = { x => x % 10 >= bottom } /* stack-allocated */
 // Print filtered values
 pfv(collection, l)
-
 if (cond) {
   val heap_l = Evacuation(l)
   array.append(heap_l) /* correct */
@@ -289,7 +287,6 @@ def pfv(c: Array[Int], pred: (Int) -> Bool) {
       println(e)
     }
   }
-
   val heap_pred = Evacuation(l)
   array.append(heap_pred) /* correct */
 }
